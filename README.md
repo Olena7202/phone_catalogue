@@ -1,83 +1,85 @@
 # Phone Catalogue
 
-Вебзастосунок каталогу телефонів, планшетів та аксесуарів на `React + TypeScript`.
-Проєкт містить список товарів, фільтрацію та сортування, сторінку деталей товару, кошик і обране.
+A phone, tablet, and accessories catalogue web app built with `React + TypeScript`.
+The project includes product listing, filtering and sorting, a product details page, a cart, and favorites.
 
-## Можливості
+Live demo: [https://olena7202.github.io/phone_catalogue/](https://olena7202.github.io/phone_catalogue/)
 
-- Перегляд каталогу за категоріями: телефони, планшети, аксесуари.
-- Сортування товарів (`Newest`, `Alphabetically`, `Cheapest`).
-- Пагінація та вибір кількості елементів на сторінці.
-- Сторінка деталей товару з вибором характеристик.
-- Додавання товарів в обране та кошик (збереження в `localStorage`).
-- Адаптивний інтерфейс з мобільним меню (`BurgerMenu`).
+## Features
 
-## Технології
+- Browse catalog categories: phones, tablets, accessories.
+- Sort products by `Newest`, `Alphabetically`, or `Cheapest`.
+- Pagination and configurable items per page.
+- Product details page with selectable options.
+- Add items to favorites and cart (stored in `localStorage`).
+- Responsive layout with a mobile menu (`BurgerMenu`).
+
+## Tech Stack
 
 - `React 18`
 - `TypeScript`
 - `React Router`
 - `SCSS`
-- `Vite` (через `@mate-academy/scripts`)
+- `Vite` (via `@mate-academy/scripts`)
 - `ESLint`, `Prettier`, `Stylelint`
 
-## Запуск локально
+## Run Locally
 
-### 1) Встановити залежності
+### 1) Install dependencies
 
 ```bash
 npm install
 ```
 
-### 2) Запустити застосунок
+### 2) Start the app
 
 ```bash
 npm start
 ```
 
-Після запуску застосунок буде доступний за локальною адресою (URL виводиться в терміналі).
+After startup, the app will be available at a local URL shown in the terminal.
 
-## NPM-скрипти
+## NPM Scripts
 
-- `npm start` - запуск dev-сервера.
-- `npm run build` - production-збірка.
-- `npm run lint` - форматування і перевірка JS/TS + SCSS.
-- `npm run lint-js` - перевірка JavaScript/TypeScript.
-- `npm run lint-css` - перевірка стилів.
-- `npm run format` - форматування `ts/tsx` через Prettier.
-- `npm run deploy` - деплой на GitHub Pages.
+- `npm start` - run the development server.
+- `npm run build` - create a production build.
+- `npm run lint` - format and lint JS/TS + SCSS.
+- `npm run lint-js` - lint JavaScript/TypeScript.
+- `npm run lint-css` - lint styles.
+- `npm run format` - format `ts/tsx` with Prettier.
+- `npm run deploy` - deploy to GitHub Pages.
 
-## Структура проєкту
+## Project Structure
 
-- `src/modules` - сторінки та великі UI-модулі.
-- `src/shared` - спільні перевикористовувані компоненти.
-- `src/Context` - глобальний стан застосунку.
-- `src/fetch` - робота з локальним API (`public/api`).
-- `public/api` - JSON-дані каталогу.
+- `src/modules` - pages and larger UI modules.
+- `src/shared` - shared reusable components.
+- `src/Context` - global application state.
+- `src/fetch` - local API layer (`public/api`).
+- `public/api` - JSON data source for the catalog.
 
-## Роутинг
+## Routing
 
-Основні маршрути:
+Main routes:
 
-- `/` - головна сторінка.
-- `/phones`, `/tablets`, `/accessories` - сторінки категорій.
-- `/product/:productId` - детальна сторінка товару.
-- `/favorites` - обране.
-- `/cart` - кошик.
+- `/` - home page.
+- `/phones`, `/tablets`, `/accessories` - category pages.
+- `/product/:productId` - product details page.
+- `/favorites` - favorites page.
+- `/cart` - cart page.
 
-## Деплой на GitHub Pages
+## Deploy to GitHub Pages
 
-1. В `package.json` вкажи коректне значення поля `homepage`.
-2. Виконай:
+1. Set the correct `homepage` value in `package.json`.
+2. Run:
 
 ```bash
 npm run deploy
 ```
 
-## Дані та API
+## Data & API
 
-У проєкті використовується локальний API з файлів у `public/api`.
-Запити виконуються через `fetch` до:
+The project uses a local file-based API from `public/api`.
+Requests are made via `fetch` to:
 
 - `api/products.json`
 - `api/phones.json`
