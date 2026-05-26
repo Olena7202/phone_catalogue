@@ -20,7 +20,6 @@ Live demo: [https://olena7202.github.io/phone_catalogue/](https://olena7202.gith
 - `TypeScript`
 - `React Router`
 - `SCSS`
-- `Vite` (via `@mate-academy/scripts`)
 - `ESLint`, `Prettier`, `Stylelint`
 
 ## Run Locally
